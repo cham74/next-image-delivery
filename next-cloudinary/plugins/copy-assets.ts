@@ -6,6 +6,9 @@ import https from 'https';
 
 const PLAYER_VERSION = '1.10.4';
 
+let hasWrittenAssets = false;
+
+
 const assets = [
   {
     uri: `https://unpkg.com/cloudinary-video-player@${PLAYER_VERSION}/dist/cld-video-player.min.css`,
@@ -19,8 +22,6 @@ const assets = [
     ]
   }
 ];
-
-let hasWrittenAssets = false;
 
 export const plugin: Plugin = {
   name: 'copy-assets',
@@ -61,6 +62,8 @@ export const plugin: Plugin = {
     hasWrittenAssets = true;
   }
 }
+
+
 
 /**
  * downloadFile

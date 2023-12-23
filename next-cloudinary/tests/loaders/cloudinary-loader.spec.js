@@ -220,17 +220,17 @@ describe('Cloudinary Loader', () => {
 
     it('should add any resizing after raw transformations', async () => {
 
+      const loaderOptions = {
+        quality: 75,
+        src: 'images/turtle',
+        width: 960,
+      }
+
       const imageProps = {
         height: '600',
         sizes: '100vw',
         src: 'images/turtle',
         width: '960',
-      }
-
-      const loaderOptions = {
-        quality: 75,
-        src: 'images/turtle',
-        width: 960,
       }
 
       const cldOptions = {
